@@ -15,12 +15,11 @@
 }
 
 .choice-prefix {
-    padding: 2rem 2.5rem;
+    padding: 2rem 0;
     color: black;
 }
 
 .choice-text {
-    text-align: center;
     color: black;
     padding: 2rem;
     width: 100%;
