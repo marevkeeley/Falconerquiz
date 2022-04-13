@@ -11,12 +11,12 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: 'Test question 1?',
-        choice1: "1",
-        choice2: "2",
-        choice3: "3",
-        choice4: "4",
-        answer: 1,
+        question: 'A bird of prey in captivity requires what kind of diet?',
+        choice1: "Cooked, well-seasoned, lean meat.",
+        choice2: "A diet closely resembling that which it would be eating in the wild.",
+        choice3: "A grain mix you can buy from the feed store, supplemented with fresh meat.",
+        choice4: "Raptors are omnivores, so they eat all types of food to stay healthy.",
+        answer: "A diet closely resembling that which it would be eating in the wild.",
     },
     {
         question: 'Test question 2?',
@@ -39,7 +39,6 @@ startGame = () => {
 }
 
 getNewQuestion = () => {
-    console.log("HERE")
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
         return window.location.assign('/end.html')
@@ -60,6 +59,7 @@ getNewQuestion = () => {
 }
 
 choices.forEach(choice => {
+    console.log("HERE")
     choice.addEventListener('click', e => {
         if(!acceptingAnswers) return
         acceptingAnswers = false
