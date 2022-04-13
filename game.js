@@ -8,6 +8,7 @@ let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = []
+let currentAnswer = ""
 
 let questions = [
     {
@@ -182,7 +183,7 @@ getNewQuestion = () => {
         const number = choice.dataset['number']
         choice.innerText = currentQuestion['choice' + number]
     })
-
+    currentAnswer = currentQuestion.answer
     availableQuestions.splice(questionIndex, 1)
     acceptingAnswers = true
 }
@@ -194,7 +195,7 @@ choices.forEach(choice => {
 
         const selectedChoice = e.currentTarget
         const selectedAnswer = selectedChoice.dataset['number']
-        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+        let classToApply = selectedAnswer == currentAnswer ? 'correct' : 'incorrect'
 
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
