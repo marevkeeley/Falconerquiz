@@ -20,6 +20,8 @@
 }
 
 .choice-text {
+    text-align: center;
+    color: black;
     padding: 2rem;
     width: 100%;
 }
