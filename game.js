@@ -179,6 +179,7 @@ getNewQuestion = () => {
     question.innerText = currentQuestion.question
 
     choices.forEach(choice =>  {
+        const number = choice.dataset['number']
         choice.innerText = currentQuestion['choice' + number]
     })
 
