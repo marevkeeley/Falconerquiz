@@ -1,5 +1,5 @@
 const question = document.querySelector('#question')
-const choices = Array.from(document.querySelector('.choice-text'))
+const choices = Array.from(document.querySelectorAll('.choice-text'))
 const progressText = document.querySelector('#progressText')
 const scoreText = document.querySelector("#score")
 
@@ -145,29 +145,27 @@ getNewQuestion = () => {
     availableQuestions.splice(questionIndex, 1)
     acceptingAnswers = true
     console.log("HERE")
-
-    choices.forEach(choice => {
-        choice.addEventListener('click', (e) => {
-            if(!acceptingAnswers) return
-            acceptingAnswers = false
-    
-            const selectedChoice = e.currentTarget
-            const selectedAnswer = selectedChoice.dataset['number']
-            let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
-    
-            if(classToApply === 'correct') {
-                incrementScore(SCORE_POINTS)
-            }
-            selectedChoice.parentElement.classList.add(classToApply)
-            setTimeout(() => {
-                selectedChoice.parentElement.classList.remove(classToApply)
-                getNewQuestion()
-            }, 1000)
-        })
-    })
 }
 
+choices.forEach(choice => {
+    choice.addEventListener('click', (e) => {
+        if(!acceptingAnswers) return
+        acceptingAnswers = false
 
+        const selectedChoice = e.currentTarget
+        const selectedAnswer = selectedChoice.dataset['number']
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+
+        if(classToApply === 'correct') {
+            incrementScore(SCORE_POINTS)
+        }
+        selectedChoice.parentElement.classList.add(classToApply)
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply)
+            getNewQuestion()
+        }, 1000)
+    })
+})
 
 incrementScore = num => {
     score += num
