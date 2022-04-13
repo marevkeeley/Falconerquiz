@@ -19,13 +19,101 @@ let questions = [
         answer: "A diet closely resembling that which it would be eating in the wild.",
     },
     {
-        question: 'Test question 2?',
-        choice1: "5",
-        choice2: "6",
-        choice3: "7",
-        choice4: "8",
-        answer: 6,
-    }
+        question: 'You must have facilities for the raptor you will fly in the sport of falconry inspected and approved by the VDWR before you get your apprentice permit.',
+        choice1: "True",
+        choice2: "False",
+        choice3: "",
+        choice4: "",
+        answer: "True",
+    },
+    {
+        question: 'The federal government has done studies that indicate:',
+        choice1: "the best bird for an apprentice falconer to have is a Cooper’s hawk.",
+        choice2: "apprentices do fine in the sport of falconry, even if they do not have a sponsor.",
+        choice3: "the sport of falconry has no impact on the wild raptor populations in the US.",
+        choice4: "the best beginning falconers have come from a hunting lifestyle.",
+        answer: "the sport of falconry has no impact on the wild raptor populations in the US.",
+    },
+    {
+        question: '',
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: "",
+    },
+    {
+        question: '',
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: "",
+    },
+    {
+        question: '',
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: "",
+    },
+    {
+        question: '',
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: "",
+    },
+    {
+        question: '',
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: "",
+    },
+    {
+        question: '',
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: "",
+    },
+    {
+        question: '',
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: "",
+    },
+    {
+        question: '',
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: "",
+    },
+    {
+        question: '',
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: "",
+    },
+    {
+        question: '',
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: "",
+    },
 ]
 
 const SCORE_POINTS = 1
@@ -56,15 +144,15 @@ getNewQuestion = () => {
 
     availableQuestions.splice(questionIndex, 1)
     acceptingAnswers = true
+    console.log("HERE")
 }
 
 choices.forEach(choice => {
-    console.log("HERE")
-    choice.addEventListener('click', e => {
+    choice.addEventListener('click', (e) => {
         if(!acceptingAnswers) return
         acceptingAnswers = false
 
-        const selectedChoice = e.target
+        const selectedChoice = e.currentTarget
         const selectedAnswer = selectedChoice.dataset['number']
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
