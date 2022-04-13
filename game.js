@@ -99,20 +99,60 @@ let questions = [
         answer: "The Department of Wildlife Resources.",
     },
     {
-        question: '',
-        choice1: "",
-        choice2: "",
-        choice3: "",
-        choice4: "",
-        answer: "",
+        question: 'The falconry exam consists of 105 questions in several categories of study. While it is not necessary to know arcane terminology or the titles of ancient texts, it is good to focus your study in the areas of concentration in the test. Among these categories are which of the following?',
+        choice1: "Definitions and regulations.",
+        choice2: "Biology and habitat of prey species.",
+        choice3: "Training and hunting.",
+        choice4: "a and c only.",
+        answer: "a and c only.",
     },
     {
-        question: '',
-        choice1: "",
-        choice2: "",
+        question: 'To pass the exam, you must know the scientific names of species.',
+        choice1: "True",
+        choice2: "False",
         choice3: "",
         choice4: "",
-        answer: "",
+        answer: "False",
+    },
+    {
+        question: 'Among the most important aspects of becoming a falconer is to build and have inspected the housing where your raptor will live. Housing must be safe for the bird in terms of perching materials and tethering systems (where chosen). Privacy for the bird is important, as well as air flow for summer cooling, yet wind protection for winter warmth. To pass inspection, a mew must',
+        choice1: "have a secure door easily closed.",
+        choice2: "have a floor that pools with water.",
+        choice3: "be difficult to access, because that assures raptor safety",
+        choice4: "assure no predators or neighborhood children can get inside, thus cannot have any windows.",
+        answer: "have a secure door easily closed.",
+    },
+    {
+        question: 'The nongame biologist assigned to your region will come and administer the test at the same time he/she inspects your housing and equipment. Among the items of equipment required to be presented at the time of inspection, you will need the following:',
+        choice1: "sturdy hunting boots.",
+        choice2: "a beating stick for flushing game.",
+        choice3: "all of the above.",
+        choice4: "none of the above.",
+        answer: "none of the above.",
+    },
+    {
+        question: 'There is much tradition surrounding the sport of falconry, and many pieces of tradi- tional equipment as well as the ways of making them have endured through centuries. A good example is a piece of leather we call a “bewit,” an item of equipment used for attaching:',
+        choice1: "bells around the neck",
+        choice2: "bells or transmitters to the legs.",
+        choice3: "jesses to the bird’s tarsi",
+        choice4: "a swivel to the jesses.",
+        answer: "bells or transmitters to the legs.",
+    },
+    {
+        question: 'There are many items that will be required before you get your first bird. Which of the following is NOT required for a newly-trapped raptor?',
+        choice1: "A glove.",
+        choice2: "A swivel",
+        choice3: "A transmitter.",
+        choice4: "A leash",
+        answer: "A transmitter.",
+    },
+    {
+        question: 'Before entering the sport, it is good to have a working knowledge of the rules, laws, ethics, and regulations governing falconry. Having a copy of the falconry regulations adopted by your state is an essential piece of reference material. For example, each level of permittee in falconry offers different privileges. Having learned these permittee levels, you know that apprentice falconers are allowed to have an imprinted bird only',
+        choice1: "if it is a red-tailed hawk.",
+        choice2: "with your sponsor’s approval and permission",
+        choice3: "if it is given to you by a rehabilitator.",
+        choice4: "none of the above",
+        answer: "none of the above",
     },
 ]
 
@@ -139,7 +179,7 @@ getNewQuestion = () => {
     question.innerText = currentQuestion.question
 
     choices.forEach(choice =>  {
-        choice.innerText = currentQuestion['choice']
+        choice.innerText = currentQuestion['choice' + number]
     })
 
     availableQuestions.splice(questionIndex, 1)
