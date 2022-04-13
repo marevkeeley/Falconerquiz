@@ -8,7 +8,6 @@ let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = []
-let currentAnswer = ""
 
 let questions = [
     {
@@ -17,7 +16,7 @@ let questions = [
         choice2: "A diet closely resembling that which it would be eating in the wild.",
         choice3: "A grain mix you can buy from the feed store, supplemented with fresh meat.",
         choice4: "Raptors are omnivores, so they eat all types of food to stay healthy.",
-        answer: "A diet closely resembling that which it would be eating in the wild.",
+        answer: 2,
     },
     {
         question: 'You must have facilities for the raptor you will fly in the sport of falconry inspected and approved by the VDWR before you get your apprentice permit.',
@@ -25,7 +24,7 @@ let questions = [
         choice2: "False",
         choice3: "",
         choice4: "",
-        answer: "True",
+        answer: 1,
     },
     {
         question: 'The federal government has done studies that indicate:',
@@ -33,7 +32,7 @@ let questions = [
         choice2: "apprentices do fine in the sport of falconry, even if they do not have a sponsor.",
         choice3: "the sport of falconry has no impact on the wild raptor populations in the US.",
         choice4: "the best beginning falconers have come from a hunting lifestyle.",
-        answer: "the sport of falconry has no impact on the wild raptor populations in the US.",
+        answer: 3,
     },
     {
         question: 'A potential sponsor requires the following before he or she will agree to shepherd an apprentice into the sport:',
@@ -41,7 +40,7 @@ let questions = [
         choice2: "specific evidence of a sincere commitment on the part of the potential apprentice to undertake all aspects of learning about the sport.",
         choice3: "a note from the potential apprentice’s spouse or parent that it’s okay with him/her if the aspirant undertakes the sport.",
         choice4: "attendance at all VFA events, and help with cleaning the sponsor’s raptor facilities.",
-        answer: "specific evidence of a sincere commitment on the part of the potential apprentice to undertake all aspects of learning about the sport.",
+        answer: 2,
     },
     {
         question: 'Not all land is suited to flying a bird of prey, no matter how much prey might be found there. Which of the following would make an ethical, safe falconer consider NOT flying a bird?',
@@ -49,7 +48,7 @@ let questions = [
         choice2: "An enormous tract of land with plenty of habitat, but where the falconer does not have permission.",
         choice3: "A semi-suburban area or industrial park property where a cat is visible, prowling the brush.",
         choice4: "All of the above.",
-        answer: "All of the above.",
+        answer: 4,
     },
     {
         question: 'It’s perfectly all right to use raptors permitted under a falconry license for personal gain. Many falconers allow their birds to make paid appearances in films and commer- cials to help support their falconry.',
@@ -57,7 +56,7 @@ let questions = [
         choice2: "False",
         choice3: "",
         choice4: "",
-        answer: "False",
+        answer: 2,
     },
     {
         question: 'The two most important characteristics of a personality capable of becoming a good falconer are',
@@ -65,7 +64,7 @@ let questions = [
         choice2: "stubbornness and a tendency to judge others.",
         choice3: "patience and persistence.",
         choice4: "a and c only.",
-        answer: "a and c only.",
+        answer: 4,
     },
     {
         question: 'The definition of falconry is',
@@ -73,7 +72,7 @@ let questions = [
         choice2: "holding a bird on the glove and attending renaissance fairs.",
         choice3: "using a better-than-average knowledge of raptor biology to rehabilitate birds of prey so they can return to the wild.",
         choice4: "doing educational presentations surrounding birds of prey, their habitats, conservation, biology, and natural history for groups from scouts to bird watchers.",
-        answer: "the pursuit of wild game in its natural habitat by means of a trained bird of prey.",
+        answer: 1,
     },
     {
         question: 'The methods used for training a bird of prey are just like those used in training a hunting dog or a hunter/jumper horse.',
@@ -81,7 +80,7 @@ let questions = [
         choice2: "False",
         choice3: "",
         choice4: "",
-        answer: "False",
+        answer: 2,
     },
     {
         question: 'Which of the following is the best approach to the various pieces and styles/types of equipment used in falconry?',
@@ -89,7 +88,7 @@ let questions = [
         choice2: "Caring for and maintaining the equipment you cannot make yourself.",
         choice3: "Annually replacing any equipment that is attached to the bird for safety’s sake.",
         choice4: "b and c above.",
-        answer: "b and c above.",
+        answer: 4,
     },
     {
         question: 'Falconry permits in the United States are regulated, administered, and enforced by each state or territory’s game department. All of these agencies have different names, and to find your state’s department, search for the group that manages hunting licens- es. In the Commonwealth of Virginia, our regulating agency is which of the following?',
@@ -97,7 +96,7 @@ let questions = [
         choice2: "The Virginia Army Reserves.",
         choice3: "Officials at the university nearest where you live.",
         choice4: "The Department of Wildlife Resources.",
-        answer: "The Department of Wildlife Resources.",
+        answer: 4,
     },
     {
         question: 'The falconry exam consists of 105 questions in several categories of study. While it is not necessary to know arcane terminology or the titles of ancient texts, it is good to focus your study in the areas of concentration in the test. Among these categories are which of the following?',
@@ -105,7 +104,7 @@ let questions = [
         choice2: "Biology and habitat of prey species.",
         choice3: "Training and hunting.",
         choice4: "a and c only.",
-        answer: "a and c only.",
+        answer: 4,
     },
     {
         question: 'To pass the exam, you must know the scientific names of species.',
@@ -113,7 +112,7 @@ let questions = [
         choice2: "False",
         choice3: "",
         choice4: "",
-        answer: "False",
+        answer: 2,
     },
     {
         question: 'Among the most important aspects of becoming a falconer is to build and have inspected the housing where your raptor will live. Housing must be safe for the bird in terms of perching materials and tethering systems (where chosen). Privacy for the bird is important, as well as air flow for summer cooling, yet wind protection for winter warmth. To pass inspection, a mew must',
@@ -121,7 +120,7 @@ let questions = [
         choice2: "have a floor that pools with water.",
         choice3: "be difficult to access, because that assures raptor safety",
         choice4: "assure no predators or neighborhood children can get inside, thus cannot have any windows.",
-        answer: "have a secure door easily closed.",
+        answer: 1,
     },
     {
         question: 'The nongame biologist assigned to your region will come and administer the test at the same time he/she inspects your housing and equipment. Among the items of equipment required to be presented at the time of inspection, you will need the following:',
@@ -129,7 +128,7 @@ let questions = [
         choice2: "a beating stick for flushing game.",
         choice3: "all of the above.",
         choice4: "none of the above.",
-        answer: "none of the above.",
+        answer: 4,
     },
     {
         question: 'There is much tradition surrounding the sport of falconry, and many pieces of tradi- tional equipment as well as the ways of making them have endured through centuries. A good example is a piece of leather we call a “bewit,” an item of equipment used for attaching:',
@@ -137,7 +136,7 @@ let questions = [
         choice2: "bells or transmitters to the legs.",
         choice3: "jesses to the bird’s tarsi",
         choice4: "a swivel to the jesses.",
-        answer: "bells or transmitters to the legs.",
+        answer: 2,
     },
     {
         question: 'There are many items that will be required before you get your first bird. Which of the following is NOT required for a newly-trapped raptor?',
@@ -145,7 +144,7 @@ let questions = [
         choice2: "A swivel",
         choice3: "A transmitter.",
         choice4: "A leash",
-        answer: "A transmitter.",
+        answer: 3,
     },
     {
         question: 'Before entering the sport, it is good to have a working knowledge of the rules, laws, ethics, and regulations governing falconry. Having a copy of the falconry regulations adopted by your state is an essential piece of reference material. For example, each level of permittee in falconry offers different privileges. Having learned these permittee levels, you know that apprentice falconers are allowed to have an imprinted bird only',
@@ -153,7 +152,7 @@ let questions = [
         choice2: "with your sponsor’s approval and permission",
         choice3: "if it is given to you by a rehabilitator.",
         choice4: "none of the above",
-        answer: "none of the above",
+        answer: 4,
     },
 ]
 
@@ -195,7 +194,7 @@ choices.forEach(choice => {
 
         const selectedChoice = e.currentTarget
         const selectedAnswer = selectedChoice.dataset['number']
-        let classToApply = selectedAnswer === currentAnswer ? 'correct' : 'incorrect'
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
