@@ -184,7 +184,6 @@ getNewQuestion = () => {
 
     availableQuestions.splice(questionIndex, 1)
     acceptingAnswers = true
-    console.log("HERE")
 }
 
 choices.forEach(choice => {
