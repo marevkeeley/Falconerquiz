@@ -279,6 +279,86 @@ let questions = [
         choice1: "are first to return from migration.",
         choice2: "select the nesting/egg-laying area.",
         choice3: "provide most of the food after the young have hatched.",
+        choice4: "all of the above.",
+        answer: 4,
+    },
+    {
+        question: 'After a strenuous fight with a squirrel during hunting, you discover that your RTH has bent a tail feather. What should you do about this?',
+        choice1: "Cut it off at the bend and imp a new feather in its place.",
+        choice2: "Call your sponsor and ask for advice.",
+        choice3: "Soak the feather in leather softening oil.",
+        choice4: "Pluck the feather from the bird’s body so it will grow back during the summer.",
+        answer: 2,
+    },
+    {
+        question: 'As you administer feather mite spray to your newly-trapped bird, you notice visible lines along the shafts of the wing feathers, all about the same spot on several prima- ries. These marks might be “fret marks” and indicate which of the following:',
+        choice1: "arrested feather development.",
+        choice2: "stress.",
+        choice3: "both a and b.",
+        choice4: "none of the above.",
+        answer: 3,
+    },
+    {
+        question: 'Any passage hawk in captivity is most likely to break tail feathers',
+        choice1: " if the falconer uses a tail saver on his/her bird.",
+        choice2: "if the bird normally crashes into brush to catch rabbits.",
+        choice3: "if it is housed improperly or kept on a perch wrong for its speci",
+        choice4: "when it is allowed to warble.",
+        answer: 3,
+    },
+    {
+        question: 'Knowing the stages of a raptor’s life are important identification techniques, and the terminology used for thousands of years in falconry is helpful in designating those stages. Which of the statements below is/are true:',
+        choice1: "A haggard hawk was once an eyass.",
+        choice2: "An eyass hawk was once a haggard.",
+        choice3: "A passage bird was once an eyass.",
+        choice4: "a and c above are true.",
+        answer: 4,
+    },
+    {
+        question: 'Which of the birds of prey listed is most likely to travel the longest distance during its migratory period?',
+        choice1: "Merlin.",
+        choice2: "Prairie falcon.",
+        choice3: "Goshawk.",
+        choice4: "Gyrfalcon.",
+        answer: 1,
+    },
+    {
+        question: 'In general, a bird of prey will have reached full size by the time it is',
+        choice1: "1 year old.",
+        choice2: "fledging from the nest.",
+        choice3: "about breeding age, around 2-3 years old.",
+        choice4: "halfway through its first year.",
+        answer: 2,
+    },
+    {
+        question: 'Which among the following list of birds of prey is the LEAST likely to raise its young on a cliff or rock ledge?',
+        choice1: "Jerkin.",
+        choice2: "Golden eagle.",
+        choice3: "Prairie falcon.",
+        choice4: "Jack",
+        answer: 4,
+    },
+    {
+        question: '',
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: 1,
+    },
+    {
+        question: '',
+        choice1: "",
+        choice2: "",
+        choice3: "",
+        choice4: "",
+        answer: 1,
+    },
+    {
+        question: '',
+        choice1: "",
+        choice2: "",
+        choice3: "",
         choice4: "",
         answer: 1,
     },
@@ -311,7 +391,7 @@ startGame = () => {
 }
 
 getNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+    if(availableQuestions.length === 0 || questionCounter === MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
         return window.location.assign('https://marevkeeley.github.io/Falconerquiz/end.html')
     }
