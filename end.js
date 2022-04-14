@@ -1,3 +1,4 @@
 const finalScore = document.querySelector('#finalScore')
-const mostRecentScore = document.querySelector('.mostRecentScore')
+const mostRecentScore = localStorage.getItemx('mostRecentScore')
+
 finalScore.innerText = mostRecentScore
