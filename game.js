@@ -1264,6 +1264,9 @@ choices.forEach(choice => {
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
+        let right = currentQuestion.answer + "choice"
+        console.log(right)
+        console.log(choices[right])
          setTimeout(() => {
                 selectedChoice.parentElement.classList.remove(classToApply)
                 getNewQuestion()
