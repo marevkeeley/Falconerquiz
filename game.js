@@ -1264,6 +1264,8 @@ choices.forEach(choice => {
             incrementScore(SCORE_POINTS)
         }
         selectedChoice.parentElement.classList.add(classToApply)
+        let rightAnswer = choice.dataset[currentQuestion.answer]
+        rightAnswer.parentElement.classList.add('inocorrect')
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
