@@ -1273,7 +1273,7 @@ choices.forEach(choice => {
                 if(choice2 == currentQuestion.answer) {
                     rightAnswer = choice2.dataset['number']
                 }
-            }
+            })
             choices[rightAnswer].parentElement.classList.add('correct')
             setTimeout(() => {
                 selectedChoice.parentElement.classList.remove(classToApply)
