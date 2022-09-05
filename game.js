@@ -1263,9 +1263,7 @@ choices.forEach(choice => {
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
         }
-        else {
-            rightAnswer.parentElement.classList.add('correct')
-        }
+        rightAnswer.parentElement.classList.add('correct')
         selectedChoice.parentElement.classList.add(classToApply)
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply)
