@@ -1268,13 +1268,8 @@ choices.forEach(choice => {
             }, 1000)
         }
         else {
-            let rightAnswer = 0;
-            choices.forEach(choice2 => {
-                if(choice2 == currentQuestion.answer) {
-                    rightAnswer = choice2.dataset['number']
-                }
-            })
-            choices[rightAnswer].parentElement.classList.add('correct')
+            let rightAnswer = currentQuestion.answer
+            rightAnswer.parentElement.classList.add('correct')
             setTimeout(() => {
                 selectedChoice.parentElement.classList.remove(classToApply)
                 rightAnswer.parentElement.classList.remove('correct')
