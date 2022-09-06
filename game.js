@@ -1260,6 +1260,7 @@ choices.forEach(choice => {
         const selectedAnswer = selectedChoice.dataset['number']
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
         let right = "choice" + currentQuestion.answer
+        console.log(right)
         let rightAnswer = currentQuestion.right
         console.log(currentQuestion)
         console.log(selectedChoice)
