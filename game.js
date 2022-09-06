@@ -1261,7 +1261,7 @@ choices.forEach(choice => {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
         let right = "choice" + currentQuestion.answer
         console.log(right)
-        let rightAnswer = currentQuestion.right
+        let rightAnswer = currentQuestion.choice4
         console.log(currentQuestion)
         console.log(selectedChoice)
         console.log(rightAnswer)
