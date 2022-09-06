@@ -1260,11 +1260,6 @@ choices.forEach(choice => {
         const selectedAnswer = selectedChoice.dataset['number']
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
         let rightAnswer = choices[currentQuestion.answer - 1]
-        console.log(currentQuestion.answer)
-        console.log(choices)
-        console.log(currentQuestion)
-        console.log(selectedChoice)
-        console.log(rightAnswer)
         selectedChoice.parentElement.classList.add(classToApply)
         let flag = selectedAnswer == currentQuestion.answer ? 0 : 1
         if(classToApply === 'correct') {
@@ -1277,7 +1272,7 @@ choices.forEach(choice => {
                 selectedChoice.parentElement.classList.remove(classToApply)
                 if (flag === 1) rightAnswer.parentElement.classList.remove('correct')
                 getNewQuestion()
-            }, 1000)
+            }, 2000)
     })
 })
 
