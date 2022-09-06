@@ -1259,7 +1259,7 @@ choices.forEach(choice => {
         const selectedChoice = e.currentTarget
         const selectedAnswer = selectedChoice.dataset['number']
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
-        let rightAnswer = choices[currentQuestion.answer]
+        let rightAnswer = choices[currentQuestion.answer - 1]
         console.log(currentQuestion.answer)
         console.log(choices)
         console.log(currentQuestion)
