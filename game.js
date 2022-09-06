@@ -1270,7 +1270,7 @@ choices.forEach(choice => {
         }
          setTimeout(() => {
                 selectedChoice.parentElement.classList.remove(classToApply)
-                if (flag === 1) rightAnswer.parentElement.classList.remove(classToApply)
+                if (flag === 1) rightAnswer.parentElement.classList.remove('correct')
                 getNewQuestion()
             }, 1000)
     })
