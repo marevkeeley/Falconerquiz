@@ -1261,12 +1261,16 @@ choices.forEach(choice => {
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
         console.log(selectedChoice)
         selectedChoice.parentElement.classList.add(classToApply)
+        let flag = selectedAnswer == currentQuestion.answer ? 0 : 1
         if(classToApply === 'correct') {
             incrementScore(SCORE_POINTS)
-        }       
-        console.log(choices[currentQuestion.answer])
+        }  
+        else {
+            choices[currentQuestion.answer].parentElement.classList.add('correct')
+        }
          setTimeout(() => {
                 selectedChoice.parentElement.classList.remove(classToApply)
+                if (flag === 1) selectedChoice.parentElement.classList.remove(classToApply)
                 getNewQuestion()
             }, 1000)
     })
